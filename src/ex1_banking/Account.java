@@ -4,9 +4,7 @@ public class Account {
     String name;
     String surname;
     float balance = 0;
-    //currency
-
-
+    Currency currency;
 
     static void createAccount(){
 
