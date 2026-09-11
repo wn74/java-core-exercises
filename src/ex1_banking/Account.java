@@ -1,12 +1,27 @@
 package ex1_banking;
 
-public class Account {
-    String name;
-    String surname;
-    float balance = 0;
-    Currency currency;
+import java.math.BigDecimal;
 
-    static void createAccount(){
+public class Account {
+    private String owner;
+    private BigDecimal balance =BigDecimal.ZERO;
+    private Currency currency;
+
+    public Account(String owner, Currency currency ){
+        this.owner = owner;
+        this.currency = currency;
+
+    }
+
+    public void deposit(){
+       
+    }
+
+    public void withdraw(){
+
+    }
+
+    public void transfer(){
 
     }
 }
