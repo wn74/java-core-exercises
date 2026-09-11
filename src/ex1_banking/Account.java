@@ -13,15 +13,15 @@ public class Account {
 
     }
 
-    public void deposit(){
+    public void deposit(BigDecimal amount){
        
     }
 
-    public void withdraw(){
+    public void withdraw(BigDecimal amount){
 
     }
 
-    public void transfer(){
+    public void transfer(String recepient, BigDecimal amount){
 
     }
 }
