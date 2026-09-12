@@ -1,18 +1,6 @@
 package ex1_banking;
 
 import java.math.BigDecimal;
-//=========================Banking system========================= 
-//--Bank account:
-//  [x] Create
-//      [x]Currency enum
-//      [x]owner
-//      [x]balance
-//--Balance
-//  [x] Deposit
-//  [x] Withdraw
-//  [x] Transfer
-//  [x] Error handling
-
 
 public class Main {
 
@@ -46,5 +34,5 @@ public class Main {
     System.out.println(alice);
 
 }
-  
+
 }
