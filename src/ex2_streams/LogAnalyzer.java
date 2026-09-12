@@ -19,6 +19,12 @@ public class LogAnalyzer {
 
     }
 
+    /**
+     * Filters log entries by level
+     * @param messages the list of log entries
+     * @param level the looked for value
+     * @return the list of log entries containing said level
+     */
     public List<LogEntry> levelFilterQuery(List<LogEntry> messages, String level){
 
         return messages.stream().filter(entry -> entry.level().equals(level)).toList();
@@ -35,6 +41,11 @@ public class LogAnalyzer {
 
     }
 
+    /**
+     * Counts all log entries of each separate service
+     * @param messages the list of log entries
+     * @return the map Service: amountOfEntries
+     */
     public Map<String, Long> serviceCountQuery(List<LogEntry> messages){
 
         return messages.stream().collect(Collectors.groupingBy(LogEntry::service, Collectors.counting()));
@@ -51,6 +62,12 @@ public class LogAnalyzer {
 
     }
 
+    /**
+     * Looks for the first log entry, whose message has partialString as a substring
+     * @param messages the list of log entries
+     * @param partialString the looked for substring
+     * @return an Optional containing the first matching LogEntry, or an empty Optional if no match is found
+     */
     public Optional<LogEntry> messageFindFirstQuery(List<LogEntry> messages, String partialString){
 
         return messages.stream().filter(entry -> entry.message().toLowerCase().contains(partialString.toLowerCase())).findFirst();

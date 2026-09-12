@@ -10,15 +10,15 @@ public record LogEntry(String level, String service, String message) {
        
     }
 
-    public  boolean isError(){
+    public boolean isError(){
         return "ERROR".equals(this.level());
     }
 
-    public  boolean isInfo(){
+    public boolean isInfo(){
         return "INFO".equals(this.level());
     }
 
-    public  boolean isWarn(){
+    public boolean isWarn(){
         return "WARN".equals(this.level());
     }
 }

@@ -35,9 +35,9 @@ public class Main {
 
     LogAnalyzer analyzer = new LogAnalyzer();
 
-    analyzer.printLevelFilterQuery(entryStream, "INFO");
+    analyzer.printLevelFilterQuery(entryStream, "ERROR");
     analyzer.printServiceCountQuery(entryStream);
-    analyzer.printMessageFindFirstQuery(entryStream, "timeout");
+    analyzer.printMessageFindFirstQuery(entryStream, "timed out");
 
     }
 
