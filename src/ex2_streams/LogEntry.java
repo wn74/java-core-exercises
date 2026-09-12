@@ -1,7 +1,5 @@
 package ex2_streams;
 
-import java.util.stream.Stream;
-
 //String used for level instead of an enum for the purposes of this exercise 
 public record LogEntry(String level, String service, String message) {
     
@@ -12,15 +10,15 @@ public record LogEntry(String level, String service, String message) {
        
     }
 
-    public static boolean isError(LogEntry entry){
-        return "ERROR".equals(entry.level());
+    public  boolean isError(){
+        return "ERROR".equals(this.level());
     }
 
-    public static boolean isInfo(LogEntry entry){
-        return "INFO".equals(entry.level());
+    public  boolean isInfo(){
+        return "INFO".equals(this.level());
     }
 
-    public static boolean isWarn(LogEntry entry){
-        return "WARN".equals(entry.level());
+    public  boolean isWarn(){
+        return "WARN".equals(this.level());
     }
 }

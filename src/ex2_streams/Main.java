@@ -1,7 +1,6 @@
 package ex2_streams;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 //=========================Log processing========================= 
 //--Log Entry:
@@ -9,7 +8,7 @@ import java.util.stream.Stream;
 //  Queries:    
 //      [x]Filter by level    
 //      [x]Count logs by service
-//      []Search first entry containing a specific word (using Optional)
+//      [x]Search first entry containing a specific word (using Optional)
 
 
 public class Main {
@@ -38,10 +37,8 @@ public class Main {
 
     analyzer.printLevelFilterQuery(entryStream, "INFO");
     analyzer.printServiceCountQuery(entryStream);
+    analyzer.printMessageFindFirstQuery(entryStream, "timeout");
 
     }
-    
-
-    
 
 }
