@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 //  [x] Create from string of struncture "LEVEL|SERVICE|MESSAGE"
 //  Queries:    
 //      [x]Filter by level    
-//      []Count logs by service
+//      [x]Count logs by service
 //      []Search first entry containing a specific word (using Optional)
 
 
@@ -36,7 +36,8 @@ public class Main {
 
     LogAnalyzer analyzer = new LogAnalyzer();
 
-    analyzer.filterQuery(entryStream, "ERROR");
+    analyzer.printLevelFilterQuery(entryStream, "INFO");
+    analyzer.printServiceCountQuery(entryStream);
 
     }
     
