@@ -2,15 +2,6 @@ package ex2_streams;
 
 import java.util.List;
 
-//=========================Log processing========================= 
-//--Log Entry:
-//  [x] Create from string of struncture "LEVEL|SERVICE|MESSAGE"
-//  Queries:    
-//      [x]Filter by level    
-//      [x]Count logs by service
-//      [x]Search first entry containing a specific word (using Optional)
-
-
 public class Main {
     
     
