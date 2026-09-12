@@ -11,4 +11,16 @@ public record LogEntry(String level, String service, String message) {
         return new LogEntry(rawDataStrings[0],rawDataStrings[1],rawDataStrings[2]);
        
     }
+
+    public static boolean isError(LogEntry entry){
+        return "ERROR".equals(entry.level());
+    }
+
+    public static boolean isInfo(LogEntry entry){
+        return "INFO".equals(entry.level());
+    }
+
+    public static boolean isWarn(LogEntry entry){
+        return "WARN".equals(entry.level());
+    }
 }
