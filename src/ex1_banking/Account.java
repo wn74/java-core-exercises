@@ -13,6 +13,11 @@ public class Account {
 
     }
 
+    /**
+     * 
+     * @param amount the value to add to the balance
+     * @throws IllegalArgumentException if amount is less or equal to zero
+     */
     public void deposit(BigDecimal amount){
 
         if (amount.compareTo(BigDecimal.ZERO) <= 0) {
@@ -26,9 +31,15 @@ public class Account {
        
     }
 
+    /**
+     * 
+     * @param amount the amount to substract from the balance
+     * @throws InsufficientFundsException if not enough money in the account 
+     * @throws IllegalArgumentException if amount is less or equal to zero
+     */
     public void withdraw(BigDecimal amount) throws InsufficientFundsException{
 
-        if (amount.compareTo(BigDecimal.ZERO) < 0) {
+        if (amount.compareTo(BigDecimal.ZERO) <= 0) {
 
             throw new IllegalArgumentException("Amount must be positive!");
 
@@ -45,6 +56,14 @@ public class Account {
 
     }
 
+    /**
+     * 
+     * @param recipient the account receiving the funds
+     * @param amount the amount to transfered
+     * @throws InsufficientFundsException if sender doesn't have the amount to send
+     * @throws CurrencyMismatchException if sender/recipient account currencies don't match
+     */
+    
     public void transfer(Account recipient, BigDecimal amount) throws InsufficientFundsException, CurrencyMismatchException{
 
         if (this.currency != recipient.currency) {
@@ -57,6 +76,7 @@ public class Account {
         recipient.deposit(amount);
 
     }
+
 
     public BigDecimal getBalance(){
 
