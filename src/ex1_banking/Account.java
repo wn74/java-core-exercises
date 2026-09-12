@@ -20,13 +20,7 @@ public class Account {
      */
     public void deposit(BigDecimal amount){
 
-        if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-
-            throw new IllegalArgumentException("Amount must be positive!");
-
-        }  
-
-
+        validatePositive(amount);
         balance = balance.add(amount);
        
     }
@@ -39,12 +33,7 @@ public class Account {
      */
     public void withdraw(BigDecimal amount) throws InsufficientFundsException{
 
-        if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-
-            throw new IllegalArgumentException("Amount must be positive!");
-
-        }  
-
+        validatePositive(amount);
 
         if (amount.compareTo(balance) > 0) {
 
@@ -75,6 +64,12 @@ public class Account {
         this.withdraw(amount);
         recipient.deposit(amount);
 
+    }
+
+    private void validatePositive(BigDecimal amount) {
+        if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Amount must be positive!");
+        }
     }
 
 
