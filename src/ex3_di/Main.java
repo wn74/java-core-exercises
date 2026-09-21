@@ -7,8 +7,9 @@ package ex3_di;
 //  [] ID verification
 //  [] Name verification
 //  [] Email verification
-//  []User with same ID and or EMAIL can't be created    
-//  
+//  [] User with same ID and or EMAIL can't be created    
+//--Fixes
+//  [] Change User to record 
 
 
 public class Main {
