@@ -16,7 +16,7 @@ public class InMemoryUserRepository implements UserRepository{
 
     @Override
     public Optional<User> findById(Long id) {
-        return Optional.of(storage.get(id));
+        return Optional.ofNullable(storage.get(id));
     }
 
     @Override
@@ -26,8 +26,7 @@ public class InMemoryUserRepository implements UserRepository{
 
     @Override
     public List<User> findAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return storage.values().stream().toList();
     }
 
 
