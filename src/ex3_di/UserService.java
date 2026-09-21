@@ -80,6 +80,7 @@ public class UserService {
 
         User newUser = new  User(id,email,fullName);
         userRepository.save(newUser);
+        
 
     }
     
