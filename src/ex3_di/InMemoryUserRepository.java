@@ -11,7 +11,7 @@ public class InMemoryUserRepository implements UserRepository{
 
     @Override
     public void save(User user) {
-        storage.put(user.id, user);
+        storage.put(user.id(), user);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class InMemoryUserRepository implements UserRepository{
 
     @Override
     public Optional<User> findByEmail(String email) {
-       return storage.values().stream().filter(user -> user.email.equalsIgnoreCase(email)).findFirst();
+       return storage.values().stream().filter(user -> user.email().equalsIgnoreCase(email)).findFirst();
     }
 
     @Override

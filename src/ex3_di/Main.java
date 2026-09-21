@@ -3,9 +3,7 @@ package ex3_di;
 import ex3_di.exceptions.InvalidUserDataException;
 import ex3_di.exceptions.UserAlreadyExistsException;
 
-//=========================User registration=========================  
-//--Fixes
-//  [] Change User to record 
+
 
 
 public class Main {
