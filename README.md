@@ -10,7 +10,7 @@ Practical exercises for getting comfortable with Java after working primarily in
 
 Python relies heavily on duck typing and dictionaries. Rust uses traits, pattern matching, and ownership rules. Java takes a very different path centered on class hierarchies, strict interfaces, built-in thread management, and the standard collections library.
 
-This repository contains four standalone command-line exercises built using only the standard Java library. The goal was to build solid habits with core Java patterns before moving on to larger frameworks like Spring Boot:
+This repository contains four standalone command-line exercises built using only the standard Java library. The goal was to build solid habits with core Java patterns before moving on to larger frameworks like Spring Boot or Vaadin:
 
 * **Handling money correctly:** Understanding why `double` breaks financial math and how to use `BigDecimal` instead.
 * **Transforming data:** Using Java Streams and `Optional` instead of standard `for` loops, list comprehensions, or null checks.
