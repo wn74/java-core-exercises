@@ -1,4 +1,3 @@
-# java-core-exercises
 # Java Enterprise Fundamentals
 
 Transitioning core architectural concepts, strict typing, and concurrency patterns from Python and Rust into idiomatic modern Java.
