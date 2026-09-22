@@ -1,7 +1,7 @@
 package ex4_concurrency;
 
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ArrayBlockingQueue;
+
 
 
 public class BarcodeWorker implements Runnable{
@@ -20,31 +20,24 @@ public class BarcodeWorker implements Runnable{
     @Override 
     public void run() {
 
-        System.out.println("Thread running");
+        while (true) {
+            
+        
+        //System.out.println("Thread running");
 
         try {
-        queue.take();
-        System.out.println("Starting");
+        String barcode = queue.take();
+        System.out.println("["+ workerId+"] "+"Started processing: " + barcode);
         Thread.sleep(800);
-        System.out.println("Ending");
+        System.out.println("["+ workerId+"] "+"Finished processing: " + barcode);
         } catch (InterruptedException e) {
 
             System.out.println("Caught interrupted exception" + e);
+            break;
 
         }
 
-    }
-
-
-
-    public class InnerBarcodeWorker {
-    
-        public static void main(String[] args) {
-            
-
-
         }
-        
     }
 
 }
